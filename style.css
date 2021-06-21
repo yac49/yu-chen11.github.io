@@ -1,0 +1,68 @@
+body {
+    background-color: rgba(0, 0, 0, .6);
+    background-blend-mode: multiply;
+    background-image: url('image/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+table{
+    border-collapse: collapse;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+h1 , h4{
+    color: whitesmoke;
+}
+th , td{
+    text-align: center;
+    padding: 16px;
+    color: whitesmoke;
+}
+caption{
+    color: whitesmoke;
+    padding: 16px;
+    text-align: left;
+}
+.abkcolor{
+    background-color: cadetblue;
+    text-decoration: none;
+    text-align: center;
+}
+.abkcolor:hover{
+    background-color: dodgerblue;
+    cursor: pointer;
+}
+.abkcolor:visited {
+    color: whitesmoke;
+    text-decoration:none;
+}
+.abkcolor:link{
+    color: whitesmoke;
+    text-decoration:none;
+}
+.gobacklink{
+    text-decoration: none;
+    text-align: center;
+    font-size: 30px;
+}
+.gobacklink:hover{
+    cursor: pointer;
+}
+.gobacklink:visited {
+    color: whitesmoke;
+    text-decoration:none;
+}
+.gobacklink:link{
+    color: whitesmoke;
+    text-decoration:none;
+}
+ul{
+    list-style: square;
+    text-align: left;
+}
+.reviewstyle{
+    text-align: left;
+    padding: 20px;
+    font-family: 'Noto Serif TC', serif;
+}
