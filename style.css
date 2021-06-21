@@ -8,6 +8,7 @@ body {
     color: whitesmoke;
     text-align: center;
 }
+//set table size
 table{
     border-collapse: collapse;
     width: 100%;
@@ -16,6 +17,7 @@ th , td{
     text-align: center;
     padding: 16px;
 }
+//set picture size
 img.pic{
     width: 160px;
     height: auto;
@@ -23,6 +25,7 @@ img.pic{
 li{
     text-align: left;
 }
+//set link color
 .abkcolor{
     text-decoration: none;
     text-align: center;
