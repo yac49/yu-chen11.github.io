@@ -2,53 +2,74 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500&display=swap" rel="stylesheet">
-  <title>比特幣匯率轉換</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500&display=swap" rel="stylesheet">
+    <title>MY CV</title>
 </head>
 
 <body>
-  <h1><img class="animated-gif" src="image/bitcoin.gif" alt="Loading" title="Loading">比特幣轉換美金小工具</h1>
-  <div>
-    匯率日期：<input id="date" type="date" value="2021-06-11" />
-    <script>
-      date.max = new Date().toISOString().split("T")[0];
-    </script>
+    <h1>This is Lucy, Lin.</h1>
 
-    <input type="text" id="bitcoin" value="100" required>比特幣
-    <button onclick="change()">轉換</button>
-    為 <h id="price"> </h> 美金
-  </div>
-  <table border=3px>
-    <thead>
-      <th style="background-color:cornflowerblue">當前匯率</th>
-    </thead>
-    <tr>
-      <td>1 比特幣 約為<h id="usdollar"> </h>美金</td>
-    </tr>
-  </table>
-  <script>
-    change();
-    function change() {
-      var x = document.getElementById("bitcoin").value;
-      if (isNaN(x)) {
-        alert("請輸入數字");
-        return false;
-      }
-      var date = document.getElementById("date").value;
-      var bitcoin = document.getElementById("bitcoin").value;
-      var api_url = "https://api.coindesk.com/v1/bpi/historical/close.json?start=" + date + "&end=" + date;
-      fetch(api_url).then(res => res.json())
-        .then((out) => {
-          document.getElementById("price").innerHTML = Object.values(out.bpi) * bitcoin;
-          document.getElementById("usdollar").innerHTML = Object.values(out.bpi);
-        }).catch(err => alert('something error'));
-    }
+    <table>
+        <caption>
+            <h>These are all about me.</h>
+            <a href="http://10.101.7.4/test.php" target="_blank" class="abkcolor">Click Me.</a>
+        </caption>
+        <tr style="background-color:cornflowerblue">
+            <th>Photo</th>
+            <th>Schools</th>
+            <th>Hobbies</th>
+        </tr>
+        <tr>
+            <td><img class="pic" src="img/my_photo.jpg" alt="This is my photo." title="Lucy is cute."></td>
+            <td>
+                <ul>
+                    <li>A elementary school</li>
+                    <li>A junior high school</li>
+                    <li>A high school</li>
+                    <li>A university</li>
+                </ul>
+            </td>
+            <td>
+                <form>
+                    <p>Select one of my hobbies.</p>
+                    <select id="hobbies-list" onchange="changeHobbies(this.selectedIndex)"></select>
+                    <br>
+                    <br>
+                    <p>Where would I usually do this</p>
+                    <h id="place-list"></h>
+                </form>
 
-  </script>
+                <script type="text/javascript">
+                    var hobbies = ['swimming', 'jogging', 'bicycling'];
+                    var hobbiesSelect = document.getElementById("hobbies-list");
+                    var inner = "";
+                    for (var i = 0; i < hobbies.length; i++) {
+                        inner = inner + '<option value=i>' + hobbies[i] + '</option>';
+                    }
+                    hobbiesSelect.innerHTML = inner;
+
+
+                    var place = new Array();
+                    place[0] = ['Swimming Pool A'];
+                    place[1] = ['B Mountain'];
+                    place[2] = ['C Street'];
+                    function changeHobbies(index) {
+                        var Sinner = "";
+
+                        Sinner = Sinner + place[index];
+
+                        var placeSelect = document.getElementById("place-list");
+                        placeSelect.innerHTML = Sinner;
+                    }
+                    changeHobbies(document.getElementById("hobbies-list").selectedIndex);
+                </script>
+            </td>
+        </tr>
+    </table>
 </body>
 
 </html>
