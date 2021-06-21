@@ -9,6 +9,7 @@ body {
     text-align: center;
 }
 table{
+    //set table size
     border-collapse: collapse;
     width: 100%;
 }
@@ -17,6 +18,7 @@ th , td{
     padding: 16px;
 }
 img.pic{
+    //set picture size
     width: 160px;
     height: auto;
 }
