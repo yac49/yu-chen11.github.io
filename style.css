@@ -1,68 +1,40 @@
 body {
-    background-color: rgba(0, 0, 0, .6);
+    background-color: rgb(35, 47, 53);
     background-blend-mode: multiply;
-    background-image: url('image/background.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-  }
+    font-family: 'Noto Serif TC', serif;
+    color: whitesmoke;
+    text-align: center;
+}
 table{
     border-collapse: collapse;
     width: 100%;
-    font-family: 'Montserrat', sans-serif;
-}
-h1 , h4{
-    color: whitesmoke;
 }
 th , td{
     text-align: center;
     padding: 16px;
-    color: whitesmoke;
 }
-caption{
-    color: whitesmoke;
-    padding: 16px;
+img.pic{
+    width: 160px;
+    height: auto;
+}
+li{
     text-align: left;
 }
 .abkcolor{
-    background-color: cadetblue;
     text-decoration: none;
     text-align: center;
 }
 .abkcolor:hover{
-    background-color: dodgerblue;
     cursor: pointer;
 }
 .abkcolor:visited {
-    color: whitesmoke;
+    color:firebrick;
     text-decoration:none;
 }
 .abkcolor:link{
-    color: whitesmoke;
+    color: firebrick;
     text-decoration:none;
-}
-.gobacklink{
-    text-decoration: none;
-    text-align: center;
-    font-size: 30px;
-}
-.gobacklink:hover{
-    cursor: pointer;
-}
-.gobacklink:visited {
-    color: whitesmoke;
-    text-decoration:none;
-}
-.gobacklink:link{
-    color: whitesmoke;
-    text-decoration:none;
-}
-ul{
-    list-style: square;
-    text-align: left;
-}
-.reviewstyle{
-    text-align: left;
-    padding: 20px;
-    font-family: 'Noto Serif TC', serif;
 }
